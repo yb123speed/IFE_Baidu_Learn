@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mission1</title>
+    <style>
+        .text{
+            margin-top: 5rem;
+            text-align: center;
+            height: 10rem;
+            font-size: 5rem;
+            transition: all 0.5s;    
+        }
+        .line{
+            margin: auto;
+            height: 1rem;
+            width: 0rem;
+            transition: all 0.5s;
+            background-color: blueviolet;
+        }
+        button{
+            margin: 10rem 0 0 0;
+            height: 5rem;
+            font-size: 3rem;
+            width: 20rem;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        前端学院
+        <div class='line'></div>
+        <button onclick="change()">切换样式</button>
+
+    </div>
+</body>
+</html>
+<script>
+    function change()
+    {
+        var text=document.getElementsByClassName('text')[0];
+        var line=document.getElementsByClassName('line')[0];
+        if(text&&line)
+        {
+            text.style.color="blueviolet";
+            line.style.width="20rem";
+            setTimeout(function(){
+                text.style.color='black';
+                line.style.width="0rem";
+            },1000);
+        }
+    }
+</script>
